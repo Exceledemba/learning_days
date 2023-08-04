@@ -1,23 +1,29 @@
 // c-arrays
 // loop and arrays
 // task
-
 #include <stdio.h>
 
 int main()
 
 {
+	int i;
 
-	double marks[5];
+	double mark[5];
 
-	printf("Enter marks: \n ");
+	printf("Enter mark: ");
 
-	for(double i = 0; i < 5; ++i)
+	for(i = 0; i < 5; i++)
 	{
-		scanf("%lf", &marks[i]);
+		scanf("%lf", &mark[i]);
 	}
 	double sum = 0;
-	for(int i = 0; i < 5; ++i)
+	for(i = 0; i < 5; ++i)
+	{
+		sum = mark[i] + sum;
+	}
+	double avgMark = sum/5;
+
+	printf("The average marks of a student: %lf\n", avgMark);
 
 	return 0;
 
